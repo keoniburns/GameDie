@@ -7,6 +7,7 @@ class GameDie
    GameDie();
    GameDie(unsigned int);
    int roll();
+   vector <int> get_distribution();
   private:
 
    vector <int> counter;
