@@ -6,14 +6,33 @@
 GameDie::GameDie()
 {
     srand(time(NULL));
+    counter.resize(SIDES);
     for(int i=0; i<SIDES; i++)
       counter[i] = 0;
 }
 
-//generate a random number between 1-6 (inclusive) and return it
+//overloaded constructor
+GameDie::GameDie(unsigned int num)
+{
+    if( num == 0 )
+    {
+        counter.resize(SIDES);
+    }
+    else{
+        counter.resize(num);
+    }
+    for(int i=0; i<SIDES; i++)
+    {
+        counter[i] = 0;
+    }
+
+}
+
+//generate a random number between 1-n where n is the counter size
+// (inclusive) and return it
 int GameDie::roll()
 {
-    int roll = rand() % SIDES;
+    int roll = rand() % counter.size();;
     counter[roll]++;
     return roll + 1;
 }
