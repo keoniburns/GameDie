@@ -6,8 +6,9 @@
 GameDie::GameDie()
 {
     srand(time(NULL));
-    counter.resize(SIDES);
-    for(int i=0; i<SIDES; i++)
+    counter.resize(FACES);
+
+    for(int i=0; i<FACES; i++)
       counter[i] = 0;
 }
 
@@ -32,7 +33,7 @@ GameDie::GameDie(unsigned int num)
 // (inclusive) and return it
 int GameDie::roll()
 {
-    int roll = rand() % counter.size();;
+    int roll = rand() % counter.size();
     counter[roll]++;
     return roll + 1;
 }

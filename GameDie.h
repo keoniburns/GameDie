@@ -8,8 +8,9 @@ class GameDie
    GameDie(unsigned int);
    int roll();
   private:
-   const static int SIDES = 6;
+
    vector <int> counter;
+   const static int FACES = 6;
 };
 
 #endif
