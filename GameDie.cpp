@@ -18,12 +18,12 @@ GameDie::GameDie(unsigned int num)
 {
     if( num == 0 )
     {
-        counter.resize(SIDES);
+        counter.resize(FACES);
     }
     else{
         counter.resize(num);
     }
-    for(int i=0; i<SIDES; i++)
+    for(int i=0; i<FACES; i++)
     {
         counter[i] = 0;
     }
