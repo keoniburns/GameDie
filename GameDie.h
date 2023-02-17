@@ -1,5 +1,8 @@
 #ifndef GAMEDIE_H
 #define GAMEDIE_H
+#include <vector>
+
+using std::vector;
 
 class GameDie
 {
@@ -8,8 +11,8 @@ class GameDie
    GameDie(unsigned int);
    int roll();
    vector <int> get_distribution();
-  private:
 
+  private:
    vector <int> counter;
    const static int FACES = 6;
 };

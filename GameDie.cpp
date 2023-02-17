@@ -1,4 +1,5 @@
 #include "GameDie.h"
+#include <vector>
 #include <cstdlib>
 #include <ctime>
 
@@ -38,6 +39,8 @@ int GameDie::roll()
     return roll + 1;
 }
 
+// return the count of how many times each face has been rolled, as a vector
+// where each face's count is at index face-1 (i.e. Face 1 is at index 0)
 vector <int> GameDie::get_distribution(){
     return counter;
 }
